@@ -121,7 +121,8 @@ class WeatherCurrentTest {
             "current.wind_degree",
             greaterThanOrEqualTo(0),
             "current.wind_dir",
-            oneOf("EW", "EN", "ES", "WE", "WN", "WS", "WE", "NE", "NW", "NS", "SE", "SW", "SN"),
+            oneOf("EW", "EN", "ES", "WE",
+                "WN", "WS", "WE", "NE", "NW", "NS", "SE", "SW", "SN"),
             "current.pressure",
             greaterThan(0),
             "current.precip",
@@ -151,7 +152,8 @@ class WeatherCurrentTest {
     given()
         .when()
         .post(
-            "http://api.weatherstack.com/current" + "?access_key={access_key}&query={query}", param)
+            "http://api.weatherstack.com/current" +
+                "?access_key={access_key}&query={query}", param)
         .then()
         .statusCode(200)
         .contentType("application/json")
