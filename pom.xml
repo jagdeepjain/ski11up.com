@@ -1,0 +1,111 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+		 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+		 xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>com.ski11up</groupId>
+	<artifactId>test-automation-examples</artifactId>
+	<packaging>pom</packaging>
+	<version>1.0-SNAPSHOT</version>
+	<name>test-automation-examples</name>
+	<url>http://maven.apache.org</url>
+	<properties>
+		<maven.test.skip>false</maven.test.skip>
+		<!--JUnit-->
+		<junit.jupiter.engine>5.6.2</junit.jupiter.engine>
+		<junit.vintage.engine>5.6.2</junit.vintage.engine>
+
+		<!--RestAssured-->
+		<rest.assured.version>4.3.1</rest.assured.version>
+		<json.schema.validator>4.3.1</json.schema.validator>
+
+		<!--Assertj-->
+		<assertj.cover.version>3.5.2</assertj.cover.version>
+
+		<!--Java Source/Target Compiler -->
+		<java.compiler.version>1.8</java.compiler.version>
+
+		<!--Maven Compiler Plugin-->
+		<maven.compiler.plugin.version>3.8.1</maven.compiler.plugin.version>
+		<maven.surefire.plugin.version>2.22.2</maven.surefire.plugin.version>
+
+		<!--Java Source Code Formatter -->
+		<fmt.maven.plugin>2.9</fmt.maven.plugin>
+
+		<!-- -->
+		<org.json.version>20160810</org.json.version>
+
+		<!--Hamcrest-->
+		<hamcrest.core.version>2.2</hamcrest.core.version>
+		<!-- Log4j -->
+		<log4j.api>2.13.3</log4j.api>
+		<log4j.core>2.13.3</log4j.core>
+	</properties>
+	<dependencies>
+		<dependency>
+			<groupId>org.junit.jupiter</groupId>
+			<artifactId>junit-jupiter-engine</artifactId>
+			<version>${junit.jupiter.engine}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.junit.vintage</groupId>
+			<artifactId>junit-vintage-engine</artifactId>
+			<version>${junit.vintage.engine}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.json</groupId>
+			<artifactId>json</artifactId>
+			<version>${org.json.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>io.rest-assured</groupId>
+			<artifactId>rest-assured</artifactId>
+			<version>${rest.assured.version}</version>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>io.rest-assured</groupId>
+			<artifactId>json-schema-validator</artifactId>
+			<version>${json.schema.validator}</version>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.logging.log4j</groupId>
+			<artifactId>log4j-api</artifactId>
+			<version>${log4j.api}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.logging.log4j</groupId>
+			<artifactId>log4j-core</artifactId>
+			<version>${log4j.core}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.hamcrest</groupId>
+			<artifactId>hamcrest-core</artifactId>
+			<version>${hamcrest.core.version}</version>
+			<scope>test</scope>
+		</dependency>
+
+	</dependencies>
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>com.coveo</groupId>
+				<artifactId>fmt-maven-plugin</artifactId>
+				<version>${fmt.maven.plugin}</version>
+				<configuration>
+					<style>google</style>
+				</configuration>
+				<executions>
+					<execution>
+						<goals>
+							<goal>format</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
+		</plugins>
+	</build>
+	<modules>
+		<module>rest-assured-api-tests</module>
+	</modules>
+</project>
