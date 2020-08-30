@@ -2,7 +2,7 @@
 API Testing using Rest Assured
 
 ## Sample Test Application
-We will be using weather API provided by http://api.weatherstack.com
+Wather API provided by http://api.weatherstack.com
 
 ## Running Test
 ```
