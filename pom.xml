@@ -3,10 +3,10 @@
 		 xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>com.ski11up</groupId>
-	<artifactId>test-automation-examples</artifactId>
+	<artifactId>ski11up-learnings</artifactId>
 	<packaging>pom</packaging>
 	<version>1.0-SNAPSHOT</version>
-	<name>test-automation-examples</name>
+	<name>ski11up-learnings</name>
 	<url>http://maven.apache.org</url>
 	<properties>
 		<maven.test.skip>false</maven.test.skip>
@@ -42,6 +42,15 @@
 
 		<!-- Spring Boot-->
 		<spring.boot.version>2.3.3.RELEASE</spring.boot.version>
+		<spring.boot.starter.test.version>2.3.3.RELEASE</spring.boot.starter.test.version>
+		<spring.boot.devtools.version>2.3.3.RELEASE</spring.boot.devtools.version>
+
+		<spring.boot.autoconfigure.version>2.2.7.RELEASE</spring.boot.autoconfigure.version>
+		<spring.boot.version>2.2.7.RELEASE</spring.boot.version>
+		<spring.webmvc.version>5.2.6.RELEASE</spring.webmvc.version>
+		<spring.boot.starter.web>RELEASE</spring.boot.starter.web>
+		<spring.boot.test.version>2.2.7.RELEASE</spring.boot.test.version>
+
 	</properties>
 	<dependencies>
 		<dependency>
@@ -90,25 +99,48 @@
 
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-maven-plugin</artifactId>
-			<version>${spring.boot.version}</version>
+			<artifactId>spring-boot-autoconfigure</artifactId>
+			<version>${spring.boot.autoconfigure.version}</version>
 		</dependency>
-
-
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-webmvc</artifactId>
+			<version>${spring.webmvc.version}</version>
+		</dependency>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-web</artifactId>
+			<version>${spring.boot.starter.web}</version>
+			<scope>compile</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-test</artifactId>
+			<version>${spring.boot.test.version}</version>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot</artifactId>
+			<version>${spring.boot.version}</version>
+			<scope>compile</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-maven-plugin</artifactId>
+			<version>${spring.boot.version}</version>
 		</dependency>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-devtools</artifactId>
+			<version>${spring.boot.devtools.version}</version>
 			<scope>runtime</scope>
 			<optional>true</optional>
 		</dependency>
-
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-test</artifactId>
+			<version>${spring.boot.starter.test.version}</version>
 			<scope>test</scope>
 			<exclusions>
 				<exclusion>
@@ -117,9 +149,8 @@
 				</exclusion>
 			</exclusions>
 		</dependency>
-
-
 	</dependencies>
+
 	<build>
 		<plugins>
 			<plugin>
@@ -137,9 +168,15 @@
 					</execution>
 				</executions>
 			</plugin>
+			<plugin>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-maven-plugin</artifactId>
+			</plugin>
 		</plugins>
 	</build>
 	<modules>
 		<module>rest-assured-api-tests</module>
+		<module>spring-boot-demo</module>
+		<module>spring-demo</module>
 	</modules>
 </project>
