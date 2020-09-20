@@ -51,6 +51,12 @@
 		<spring.boot.test.version>2.2.7.RELEASE</spring.boot.test.version>
 		<spring.boot.starter.thymeleaf>2.3.4.RELEASE</spring.boot.starter.thymeleaf>
 
+		<!-- Hibernate Version -->
+		<hibernate.version>5.4.21.Final</hibernate.version>
+
+		<!-- Mysql Connector Version -->
+		<mysql.connector.version>8.0.21</mysql.connector.version>
+
 	</properties>
 	<dependencies>
 		<dependency>
@@ -154,8 +160,17 @@
 				</exclusion>
 			</exclusions>
 		</dependency>
+		<dependency>
+			<groupId>org.hibernate</groupId>
+			<artifactId>hibernate-core</artifactId>
+			<version>${hibernate.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>mysql</groupId>
+			<artifactId>mysql-connector-java</artifactId>
+			<version>${mysql.connector.version}</version>
+		</dependency>
 	</dependencies>
-
 	<build>
 		<plugins>
 			<plugin>
