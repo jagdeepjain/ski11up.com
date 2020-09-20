@@ -1,3 +1,3 @@
-# Spring MVC
+# Hibernate CRUD
 
-This project demonstrate writing first spring MVC app.
+This project demonstrate doing CRUD using hibernate.
