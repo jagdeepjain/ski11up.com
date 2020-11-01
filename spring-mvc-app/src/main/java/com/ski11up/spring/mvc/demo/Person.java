@@ -1,9 +1,7 @@
 package com.ski11up.spring.mvc.demo;
 
 /**
- * <p>
  * Person PoJo.
- * </p>
  *
  * @author Jagdeep Jain
  */
@@ -18,5 +16,4 @@ public class Person {
   public void setFullName(String fullName) {
     this.fullName = fullName;
   }
-
 }
