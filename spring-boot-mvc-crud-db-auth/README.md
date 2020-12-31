@@ -1,24 +1,14 @@
-# Read Me First
-The following was discovered as part of building this project:
+# Build And Run Using Docker
 
-* The original package name 'com.ski11up.sales.contact.java-web-app' is invalid and this project uses 'com.ski11up.sales.contact.javawebapp' instead.
+```bash
+$ docker image build -t sa .
+```
 
-# Getting Started
+Once the image is ready execute below command and that will start your spring boot app.
 
-### Reference Documentation
-For further reference, please consider the following sections:
+```bash
+$ docker run -p 8080:8080 -t sa
+```
 
-* [Official Apache Maven documentation](https://maven.apache.org/guides/index.html)
-* [Spring Boot Maven Plugin Reference Guide](https://docs.spring.io/spring-boot/docs/2.3.4.RELEASE/maven-plugin/reference/html/)
-* [Create an OCI image](https://docs.spring.io/spring-boot/docs/2.3.4.RELEASE/maven-plugin/reference/html/#build-image)
-* [Spring Web](https://docs.spring.io/spring-boot/docs/2.3.4.RELEASE/reference/htmlsingle/#boot-features-developing-web-applications)
-* [Spring Boot DevTools](https://docs.spring.io/spring-boot/docs/2.3.4.RELEASE/reference/htmlsingle/#using-boot-devtools)
-
-### Guides
-The following guides illustrate how to use some features concretely:
-
-* [Building a RESTful Web Service](https://spring.io/guides/gs/rest-service/)
-* [Serving Web Content with Spring MVC](https://spring.io/guides/gs/serving-web-content/)
-* [Building REST services with Spring](https://spring.io/guides/tutorials/bookmarks/)
-* [Accessing data with MySQL](https://spring.io/guides/gs/accessing-data-mysql/)
-
+Open browser and enter http://localhost:8080/app, this will start the application.
+>>>>>>> 9df13dd... added new project

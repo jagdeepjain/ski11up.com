@@ -7,6 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
 import javax.persistence.EntityManager;
+import javax.persistence.PersistenceContext;
 import java.util.List;
 
 /**
@@ -23,6 +24,7 @@ import java.util.List;
 @Repository
 public class ContactDAOImpl implements ContactDAO {
 
+  @PersistenceContext
   private EntityManager entityManager;
 
   @Autowired
@@ -66,7 +68,7 @@ public class ContactDAOImpl implements ContactDAO {
   public List<Contact> search(String firstName) {
     Session currentSession = entityManager.unwrap(Session.class);
     Query<Contact> query = currentSession.createQuery("FROM Contact where " +
-            "firstName=:firstName", Contact.class);
+        "firstName=:firstName", Contact.class);
     query.setParameter("firstName", firstName);
     List<Contact> contacts = query.getResultList();
     return contacts;

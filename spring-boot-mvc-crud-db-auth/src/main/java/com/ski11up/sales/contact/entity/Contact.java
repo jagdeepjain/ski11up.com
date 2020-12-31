@@ -32,16 +32,6 @@ public class Contact {
 
   public Contact() {}
 
-  @Override
-  public String toString() {
-    return "Contact{" +
-        "id=" + id +
-        ", firstName='" + firstName + '\'' +
-        ", lastName='" + lastName + '\'' +
-        ", email='" + email + '\'' +
-        '}';
-  }
-
   public Contact(String firstName, String lastName, String email) {
     this.firstName = firstName;
     this.lastName = lastName;
@@ -77,6 +67,16 @@ public class Contact {
 
   public void setEmail(String email) {
     this.email = email;
+  }
+
+  @Override
+  public String toString() {
+    return "Contact{" +
+        "id=" + id +
+        ", firstName='" + firstName + '\'' +
+        ", lastName='" + lastName + '\'' +
+        ", email='" + email + '\'' +
+        '}';
   }
 
 }
