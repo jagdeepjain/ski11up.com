@@ -11,4 +11,3 @@ $ docker run -p 8080:8080 -t sa
 ```
 
 Open browser and enter http://localhost:8080/app, this will start the application.
->>>>>>> 9df13dd... added new project
