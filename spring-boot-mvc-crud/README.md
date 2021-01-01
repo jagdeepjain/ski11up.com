@@ -1,8 +1,3 @@
-# Read Me First
-The following was discovered as part of building this project:
-
-* The original package name 'com.ski11up.sales.contact.java-web-app' is invalid and this project uses 'com.ski11up.sales.contact.javawebapp' instead.
-
 # Getting Started
 
 ### Reference Documentation
