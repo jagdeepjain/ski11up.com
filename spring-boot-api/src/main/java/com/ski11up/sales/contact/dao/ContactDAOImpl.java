@@ -45,6 +45,7 @@ public class ContactDAOImpl implements ContactDAO {
 
   @Override
   public void save(Contact contact) {
+    System.out.println(contact.toString());
     Session currentSession = entityManager.unwrap(Session.class);
     currentSession.saveOrUpdate(contact);
   }
