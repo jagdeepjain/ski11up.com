@@ -36,8 +36,8 @@
 		<!--Hamcrest-->
 		<hamcrest.core.version>2.2</hamcrest.core.version>
 		<!-- Log4j -->
-		<log4j.api>2.13.3</log4j.api>
-		<log4j.core>2.13.3</log4j.core>
+		<log4j.api>2.16.0</log4j.api>
+		<log4j.core>2.16.0</log4j.core>
 
 		<!-- Spring Boot-->
 		<spring.boot.version>2.3.3.RELEASE</spring.boot.version>
