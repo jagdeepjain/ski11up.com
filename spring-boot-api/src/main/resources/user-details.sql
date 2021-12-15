@@ -1,5 +1,5 @@
 USE
-`sales`;
+`salesapi`;
 
 DROP TABLE IF EXISTS `users`;
 CREATE TABLE `users`

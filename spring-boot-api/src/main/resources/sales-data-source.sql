@@ -1,4 +1,4 @@
-USE `sales`;
+USE `salesapi`;
 
 --
 -- Table structure for table `users`
@@ -69,4 +69,22 @@ CREATE TABLE `authority`
 
 INSERT INTO `authority`(`authorities_id`, `user_id`)
 VALUES (1, 1);
+
+DROP TABLE IF EXISTS `contacts`;
+CREATE TABLE `contacts` (
+    `id` int NOT NULL AUTO_INCREMENT,
+    `first_name` varchar(45) DEFAULT NULL,
+    `last_name` varchar(45) DEFAULT NULL,
+    `email` varchar(45) DEFAULT NULL,
+    PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=39 DEFAULT CHARSET=latin1;
+
+INSERT INTO `salesapi`.`contacts`
+(
+    `first_name`,
+    `last_name`,
+    `email`)
+VALUES ('Jagdeep', 'Jain', 'j@j.com');
+
+
 
