@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<dataset>
+    <CONTACTS ID='1000' FIRST_NAME='Pradeep' LAST_NAME='Jain' EMAIL='pd@pd-test.com'/>
+    <CONTACTS ID='1001' FIRST_NAME='Sandeep' LAST_NAME='Jain' EMAIL='sdj@sdj-test.com'/>
+    <CONTACTS ID='1002' FIRST_NAME='Yugdeep' LAST_NAME='Jain' EMAIL='ydj@ydj-test.com'/>
+    <CONTACTS ID='1003' FIRST_NAME='Jay' LAST_NAME='Testing' EMAIL='jay@testing-test.com'/>
+</dataset>
