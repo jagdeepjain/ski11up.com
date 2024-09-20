@@ -133,9 +133,9 @@ public class DBUnitExampleTest extends DBTestCase {
    */
   @Test
   public void testRowsCount() throws Exception {
-    int actualNumberOfRecords = getDataSet().getTable("CONTACTS").getRowCount();
-    int expectedNumberOfRecords =
-        getConnection().createDataSet().getTable("CONTACTS").getRowCount();
+    int actualNumberOfRecords =
+            getConnection().createDataSet().getTable("CONTACTS").getRowCount();
+    int expectedNumberOfRecords = getDataSet().getTable("CONTACTS").getRowCount();
     Assertions.assertEquals(expectedNumberOfRecords, actualNumberOfRecords);
   }
 
@@ -165,8 +165,8 @@ public class DBUnitExampleTest extends DBTestCase {
    */
   @Test
   public void testContactsTableDataSet() throws Exception {
-    ITable actualDataSet = getDataSet().getTable("CONTACTS");
-    ITable expectedDataSet = getConnection().createDataSet().getTable("CONTACTS");
+    ITable actualDataSet = getConnection().createDataSet().getTable("CONTACTS");
+    ITable expectedDataSet = getDataSet().getTable("CONTACTS");
     Assertion.assertEquals(expectedDataSet, actualDataSet);
   }
 }
