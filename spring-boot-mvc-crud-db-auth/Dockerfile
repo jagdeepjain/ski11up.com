@@ -1,6 +1,4 @@
-FROM tomcat:8.5.47-jdk8-openjdk
-
-MAINTAINER Jagdeep Jain "jagdeep.jain@gmail.com"
+FROM tomcat:9.0.95-jdk8-temurin-noble
 
 EXPOSE 8080
 
