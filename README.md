@@ -1,5 +1,5 @@
 # Ski11Up.com
 
-Blogs source code of https://ski11up.com/blogs
+Blogs source code of [https://ski11up.com/blogs](https://ski11up.com/posts/)
 
 
